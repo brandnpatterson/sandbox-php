@@ -23,6 +23,14 @@ $carsCount = count($cars);
 // var_dump = console.dir
 // print_r = recursive echo of indexed items
 
+?>
+<script type="text/javascript">
+    // var people = new Array('Brandon', 'David', 'Jayson');
+    // var cars = ['Honda', 'Toyota', 'Chevrolet'];
+
+    // console.dir(people);
+</script>
+<?php
 // Associative - like JavaScript Objects
 $newPeople = [
     'Brandon' => 30,
@@ -38,9 +46,51 @@ $ids = array(
 // print_r($ids);
 
 // Multi-dimentional
-$newCars = array(
-    array('Honda', 20, 10),
-    array('Toyota', 30, 20),
-);
+// $newCars = array(
+//     array('Honda', 20, 10),
+//     array('Toyota', 30, 20),
+// );
 
-// print_r($newCars[0][0]);
+$newCars = [
+    [
+        'name' => 'Honda',
+        'id' => 30,
+        'number' => 10,
+    ],
+    [
+        'name' => 'Toyota',
+        'id' => 30,
+        'number' => 10,
+    ],
+];
+
+print_r($newCars[0]['name']);
+?>
+<script type="text/javascript">
+
+    // var newCars = new Array(
+    //     new Array('Honda', 20, 10),
+    //     new Array('Toyota', 30, 20)
+    // );
+
+    // var newCars = [
+    //     ['Honda', 20, 10],
+    //     ['Toyota', 30, 10]
+    // ];
+
+    var newCars = [
+        {
+            make: 'Honda',
+            id: 20,
+            number: 10
+        },
+        {
+            make: 'Toyota',
+            id: 20,
+            number: 10
+        },
+    ]
+
+    console.log(newCars[0].make);
+
+</script>

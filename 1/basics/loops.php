@@ -41,17 +41,30 @@ $people = array('Brandon', 'Lauren', 'Amber');
 //     echo "$keyPlusOne: $value <br />";
 // }
 
-$peopleAndEmails = array(
-    'Brandon' => 'brandnpatterson@gmail.com',
-    'Lauren' => 'laurnpatterson@gmail.com',
-    'Amber' => 'ambrpatterson@gmail.com',
-);
+// $peopleAndEmails = array(
+//     'Brandon' => 'brandnpatterson@gmail.com',
+//     'Lauren' => 'laurnpatterson@gmail.com',
+//     'Amber' => 'ambrpatterson@gmail.com',
+// );
 
-// foreach ($people as $key => $value) {
-//     $index = array_search($key, array_keys($peopleAndEmails)) + 1;
+$peopleAndEmails = [
+    [
+        'name' => 'Brandon',
+        'email' => 'brandnpatterson@gmail.com',
+    ],
+    [
+        'name' => 'Lauren',
+        'email' => 'laurnpatterson@gmail.com',
+    ],
+    [
+        'name' => 'Amber',
+        'email' => 'ambrpatterson@gmail.com',
+    ],
+];
 
-//     echo "$index: $key: $value <br />";
-// }
+foreach ($peopleAndEmails as $i) {
+    echo "{$i['name']} {$i['email']} <br />";
+}
 
 $a = array(
     'blue' => 'nice',
@@ -60,3 +73,25 @@ $a = array(
 );
 
 // echo array_search('car', array_keys($a));
+?>
+<script type="text/javascript">
+
+    var peopleAndEmails = [
+        {
+            'name' : 'Brandon',
+            'email' : 'brandnpatterson@gmail.com',
+        },
+        {
+            'name' : 'Lauren',
+            'email' : 'laurnpatterson@gmail.com',
+        },
+        {
+            'name' : 'Amber',
+            'email' : 'ambrpatterson@gmail.com',
+        },
+    ];
+
+    peopleAndEmails.map(person => {
+        console.log(`${person.name} ${person.email}`);
+    });
+</script>
